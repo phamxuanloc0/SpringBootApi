@@ -1,6 +1,6 @@
 package com.example.springbootapi.service;
 
-import com.example.springbootapi.Repository.EmployeeRepository;
+import com.example.springbootapi.repository.EmployeeRepository;
 import com.example.springbootapi.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
