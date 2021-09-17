@@ -1,4 +1,4 @@
-package com.example.springbootapi.Repository;
+package com.example.springbootapi.repository;
 
 import com.example.springbootapi.entity.Employee;
 import org.springframework.data.repository.CrudRepository;
