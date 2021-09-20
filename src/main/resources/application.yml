@@ -1,0 +1,56 @@
+spring:
+  profiles:
+    active: production
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 123456
+    url: jdbc:mysql://localhost:3306/ktpm_21_22_db-dev
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+welcome:
+  message: 'welcome to dev'
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: qa
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 123456
+    url: jdbc:mysql://localhost:3306/ktpm_21_22_db-qa
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+welcome:
+  message: 'welcome to qa'
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: production
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 123456
+    url: jdbc:mysql://localhost:3306/ktpm_21_22_db-production
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+welcome:
+  message: 'welcome to production'
