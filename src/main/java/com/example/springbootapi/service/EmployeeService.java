@@ -1,6 +1,7 @@
 package com.example.springbootapi.service;
 
 import com.example.springbootapi.entity.Employee;
+import com.example.springbootapi.error.EmployeeNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +11,7 @@ public interface EmployeeService {
 
     public List<Employee> getAllEmployees();
 
-    public Employee getEmployeeById(Long employeeId);
+    public Employee getEmployeeById(Long employeeId) throws EmployeeNotFoundException;
 
     public void deleteById(Long employeeId);
 

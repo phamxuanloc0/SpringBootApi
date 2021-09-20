@@ -4,18 +4,20 @@ package com.example.springbootapi.entity;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 @Entity
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Getter
 @Setter
-@Builder
-@Table(name = "tbl_employee")
 public class Employee {
     @Id
     @GeneratedValue
@@ -29,5 +31,6 @@ public class Employee {
     private String lastName;
 
     @Email(message = "Please input a email!")
-    private String mail;
+    private String email;
+
 }
